@@ -176,6 +176,7 @@ $passotherinteresttext = "If Other, specify here";
 $passwdpasswdchangetext = "Leave these blank unless you want to change your password:";
 $passwdsubmittext = "Submit Information";
 $passwddeletetext = "Delete Your Account";
+$passwdalertnotifications= "Additional Notification Products";
 
 # Definitions for deleteaccount.php
 

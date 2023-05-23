@@ -73,6 +73,10 @@ addEvent(window, "load", function () {
 		var aftershock = 	$(this).find("[name='aftershock']:checked").val();
 		var updates =		$(this).find("[name='updates']:checked").val();
 		var defer = 		$(this).find("[name='defer']:checked").val();
+		var oaf = 			$(this).find("[name='oaf']:checked").val();
+		var pager = 		$(this).find("[name='pager']:checked").val();
+		var shakemap = 		$(this).find("[name='shakemap']:checked").val();
+		var shakealert = 	$(this).find("[name='shakealert']:checked").val();
 
 		var data = {
 			name: name,
@@ -83,6 +87,10 @@ addEvent(window, "load", function () {
 			aftershock: aftershock,
 			updates: updates,
 			defer: defer,
+			oaf: oaf,
+			pager: pager,
+			shakemap: shakemap,
+			shakealert: shakealert,
 			mode: 'update'
 		};
 
@@ -524,6 +532,30 @@ addEvent(window, "load", function () {
 
 	$('#btn_custom_adv').tipTip({
 		content: 'Create a new custom region using XML'
+	});
+	
+// #########################################
+// Display the proper tooltips for the Account Preferences Page
+// #########################################
+
+	$('#account_pref_aftershock').tipTip({
+		content: 'Do you want to include Aftershock updates in your email?'
+	});
+
+	$('#account_pref_oaf').tipTip({
+		content: 'Do you want to include Operational Aftershock Forecast (OAF) Notifications in your email?'
+	});
+
+	$('#account_pref_pager').tipTip({
+		content: 'Do you want to include Prompt Assessment of Global Earthquakes for Response (Pager) Notifications in your email?'
+	});
+
+	$('#account_pref_shakemap').tipTip({
+		content: 'Do you want to include Shake Map Notifications in your email?'
+	});
+
+	$('#account_pref_shakealert').tipTip({
+		content: 'Do you want to include Shake Alert Notifications in your email?'
 	});
 
 }); // end of addEvent(window, "load")

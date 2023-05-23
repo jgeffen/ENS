@@ -14,6 +14,10 @@
 	$otherinterest = param('otherinterest');
 	$updates = param('updates');
 	$defer = param('defer');
+	$oaf = param('oaf');
+	$pager = param('pager');
+	$shakemap = param('shakemap');
+	$shakealert = param('shakealert');
 	$password = param('password');
 	$confirm = param('confirm');
 	$email = trim(param('email'));
@@ -100,10 +104,10 @@
 				"INSERT INTO mailusers
 				(
 					username, name, timezone,
-					 updates, defer, hashpasswd,
+					 updates, defer, oaf, pager, shakemap, shakealert, hashpasswd,
 					 affiliation, added, lastlogin
 				) VALUES (
-					:username, '', :timezone, 'N', 'N', :hashpasswd, 'General Public', :nowstr, :nowstr
+					:username, '', :timezone, 'N', 'N', 'N', 'N', 'N', 'N', :hashpasswd, 'General Public', :nowstr, :nowstr
 				)");
 
 			$rs_insert = $query_insert->execute(array(

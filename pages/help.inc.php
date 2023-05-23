@@ -587,6 +587,77 @@ account in the system.
 <h3><a name="language"></a>Language</h3>
 <p>Select your language. English and Spanish are currently the only choices.</p>
 
+<h3><a name="pager"></a>PAGER</h3>
+<p>If selected, ENS will send a short summary containing the summary PAGER impact 
+  (Green, Yellow, Orange, or Red) and a URL link to the USGS event page where the 
+  detailed PAGER report can be accessed. Warmer colors indicate greater impact on 
+  people and/or property. PAGER reports come minutes or tens of minutes after the 
+  first report that an earthquake has occurred. Occasionally a PAGER report is 
+  updated if a significant change is made to earthquake magnitude or the affected location.</p>
+
+<p>PAGER (Prompt Assessment of Global Earthquakes for Response) estimates earthquake 
+  impacts by combining population density, shaking intensity, and models of economic 
+  and fatality losses. Loss models recognize regional differences in building inventory, 
+  construction type and quality. Models also consider time of day - whether people 
+  are likely to be exposed in dwellings or in buildings at work or at school.</p>
+
+<p>The PAGER Green summary predicts minor or no economic impact and fatalities are not 
+  expected. Red predicts severe economic impact, and/or a large number of casualties.
+  Yellow and Orange are applied to intermediate degrees of severity. ENS assigns a 
+  default level of Green so new users receive notifications on any earthquakes that generate a PAGER report.</p>
+
+<p>Please see the PAGER project page at <a href="https://earthquake.usgs.gov/data/pager/" target="_new">https://earthquake.usgs.gov/data/pager/</a> for a more complete 
+  explanation of PAGER. Information there explains how to read a onePAGER report, the scientific 
+  background for PAGER, and a searchable archive of past PAGER reports. The searchable archive of 
+  past PAGER events can be used to estimate how often ENS might send a PAGER message. For 
+  reference, globally, for all magnitudes, PAGER develops about one report per day."</p>
+
+<h3><a name="shakemap"></a>ShakeMap</h3>
+<p>If selected, ENS will send a short summary containing the ShakeMap peak shaking intensity 
+  and a URL link to the USGS event page where the detailed ShakeMap report can be accessed.</p>  
+ 
+<p>ShakeMaps show shaking intensity on a map generally centered on the earthquake location. 
+ Shaking intensity is shown on the Mercalli scale (MMI), where MMI 1 means imperceptible 
+ shaking and MMI 10 can cause damage even to well-built structures 
+ (<a href="https://www.usgs.gov/programs/earthquake-hazards/modified-mercalli-intensity-scale" target="_new">https://www.usgs.gov/programs/earthquake-hazards/modified-mercalli-intensity-scale</a>).  
+ At MMI 5 and above shaking has some potential to for damage.</p>  
+  
+<p>Shaking intensities in map view depend on earthquake magnitude, depth and distance from the source.  
+ Local geologic conditions can amplify or deamplify shaking relative to prediction, 
+ such as whether a site is on weak soil or firm rock, respectively. Seismic measurements are 
+ used where available to improve the intensity prediction. Intensity reports from the 
+ USGS Did You Feel It page are also used when available. An initial ShakeMap is made 
+ based on automatic reports of magnitude and intensity. ShakeMaps are periodically updated as additional data are received.</p>
+  
+<p>ShakeMap also reports peak ground acceleration (PGA), peak ground velocity (PGV) and 
+ spectral acceleration at multiple periods. Please see <a href="https://earthquake.usgs.gov/data/shakemap/" target="_new">https://earthquake.usgs.gov/data/shakemap/</a> 
+ for additional information. A searchable archive is available to see past ShakeMaps and to 
+ evaluate how often ShakeMaps are made. For reference over a month's time ENS ShakeMap 
+ notifications with a minimum MMI = 5 (=well felt, potentially damaging) should average 
+ fewer than one message per day. PAGER includes information from ShakeMap, 
+ so subscribing just to PAGER may meet some user's needs.</p>
+
+<h3><a name="shakealert"></a>ShakeAlert&reg;</h3>
+<p>The ShakeAlert&reg; earthquake early warning system rapidly detects potentially 
+  damaging earthquakes and develops messages for technical partners to distribute to end users. 
+  A few minutes after the earthquake, a review is made of ShakeAlert&reg; performance that compares 
+  ShakeAlert&reg; magnitude and location estimates to normally more accurate estimates from a 
+  regional seismic network. ENS subscribers to the ShakeAlert&reg; message will receive a short 
+  message indicating that a new ShakeAlert&reg; performance review has been received. 
+  The message will indicate when the event occurred, the peak estimated shaking intensity, 
+  and a short URL to the USGS event web page. </p>
+ 
+<p>Subscribing to ENS messages about ShakeAlert&reg; will not provide timely earthquake early warning. 
+  For further explanation and details, please see: <a href="https://www.usgs.gov/programs/earthquake-hazards/science/early-warning" target="_new">https://www.usgs.gov/programs/earthquake-hazards/science/early-warning</a> </p>
+
+<h3><a name="oaf"></a>OAF: Operational Aftershock Forecast</h3>
+<p>Aftershocks can be expected from most moderate and large earthquakes. 
+  The size of aftershocks generally depends on the size of the main shock.  
+  The rate of aftershocks slows over time after the main shock, but also depends on factors unique to each earthquake. 
+  Aftershock forecasts are updated periodically as information becomes available about whether a sequence is more or less productive.</p>  
+ 
+<p>For additional information on past forecasts and background on how forecasts are made, see: <a href="https://earthquake.usgs.gov/data/oaf/" target="_new">https://earthquake.usgs.gov/data/oaf/</a> </p>
+
 <h3><a name="format"></a>Message Format</h3>
 <p>
   The message format is related to the type of account. The 'HTML' and 'long' formats are

@@ -137,7 +137,11 @@ if (isset($_SESSION['USER_EMAILS'])) {
 				updates=:updates,
 				defer=:defer,
 				affiliation=:affiliation,
-				otherinterest=:otherinterest
+				otherinterest=:otherinterest,
+				oaf=:oaf,
+				pager=:pager,
+				shakemap=:shakemap,
+				shakealert=:shakealert
 			WHERE id=:id");
 
 		if($result = $query_update->execute(array(
@@ -148,6 +152,10 @@ if (isset($_SESSION['USER_EMAILS'])) {
 			':aftershock' => $aftershock,
 			':updates' => $updates,
 			':defer' => $defer,
+			':oaf' => $oaf,
+			':pager' => $pager,
+			':shakemap' => $shakemap,
+			':shakealert' => $shakealert,
 			':affiliation' => $affiliation,
 			':otherinterest' => $otherinterest,
 			':id' => $USER_INFO['id']
