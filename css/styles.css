@@ -1,0 +1,521 @@
+/* Buttons had a z-index of 2 which put it above the datepicker */
+button {
+  z-index: 1;
+}
+/* This is for the login page */
+.col {
+	background: #f9fbfb;
+}
+
+.col p {
+	margin: 1px 10px;
+}
+
+.col div.centered {
+	display: block;
+	margin: auto;
+	width: 300px;
+}
+
+
+#frmLogin {
+	width: auto;
+}
+
+#frmLogin fieldset{
+	border: 0px none;
+	padding: 5px;
+}
+
+#frmLogin h2 {
+  background: #d6e0ea;
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0px;
+	margin-right: 1em;
+	padding: 4px;
+}
+
+#frmLogin input {
+  display: inline;
+  width: 50%;
+}
+
+#frmLogin button {
+  display: block;
+}
+
+#send_email fieldset {
+	width: 350px;
+	margin: 4px;
+	padding: 2px 2px 10px 20px;
+	border: 0px none;
+	border-bottom: 1px solid #e8eeff;
+	display: block;
+}
+
+#send_email input {
+	display: block;
+	width: 175px;
+	margin: 3px;
+}
+
+#send_email label {
+	clear: both;
+	display: block;
+  font-weight: bold;
+  padding: 5px 2px 0px;
+}
+
+#send_email h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#captcha_div {
+	width: 175px;
+	float: left;
+	clear: right;
+	display: block;
+}
+
+#captcha_controls {
+	margin: 2px;
+	padding: 1px;
+	display: block;
+	font-size: .95em;
+	clear: both;
+}
+
+#captcha_info{
+	float: left;
+	clear: right;
+	width: 125px;
+	margin-left: 10px;
+	font-size: .95em;
+	display:block;
+}
+
+/* This is all very generic stuff */
+.grey {background-color: #CCCCCC;}
+.important {border: 1px solid #990000;}
+
+/* These define the styles for the profile displays */
+table.profile {
+	border: 5px groove #D3E3F0;
+}
+
+table.profile td.profilename {
+	background-color: #BFF2BF;
+}
+
+table.profile td {
+	height: 25px;
+	padding: 5px 5px 5px 5px;
+	vertical-align: middle;
+}
+
+table.profile th {
+	width: 140px;
+	text-indent: 5px;
+}
+
+img.button {
+	cursor: pointer;
+}
+
+/* These define the styles for the email displays */
+table#emailinfo {
+	border: 5px groove #D3E3F0;
+}
+
+table#tbl_regaddr {
+	width: 450px;
+	padding: 5px;
+}
+
+table#tbl_regaddr th {
+	width: 150px;
+	vertical-align: top;
+}
+
+#filteroptions, #recentevents {
+	background-color: #D3E3F0;
+}
+
+#filteroptions th, #recentevents th {
+	border-bottom: 3px ridge #D3E3F0;
+	font-size: 1.1em;
+}
+
+#filteroptions td, #recentevents td {
+	background-color: #FFFFFF;
+	border: none;
+}
+
+#filterevents {
+	padding-bottom: 40px;
+}
+
+#filterevents h3 {
+	margin-bottom: 2px;
+}
+
+#filterevents div {
+	clear: both;
+}
+
+#filterevents label {
+	width: 240px;
+	display: block;
+	float: left;
+	padding: 0px 0px 20px;
+}
+
+#recentevents th {
+	font-weight: bold;
+	background: #D3E3F0;
+}
+
+table#accountinfo {
+	border: 4px groove #D3E3F0;
+	width: 400px;
+}
+
+table#accountinfo td {
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+/* Make some pretty looking buttons */
+.ens_btn {
+    display: inline-block;
+    margin:0px 7px 0px 0px;
+    background-color:#7f8faf;
+    border:2px solid #bcbcbc;
+    border-top:2px solid #eee;
+    border-left:2px solid #eee;
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:100%;
+    line-height:130%;
+    text-decoration: none;
+    font-weight:bold;
+    color:#eeeffa;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+
+.ens_btn:visited {
+	color: #eeeffa;
+}
+
+.ens_btn:hover {
+    background-color:#dff4ff;
+    border:2px solid #c2e1ef;
+    color:#336699;
+}
+
+/* This is used on the register page */
+div.ens_form {
+  background: #f9fbfb;
+  border: 8px solid #d6e0ea;
+  margin: 10px;
+  padding: 10px 12px;
+  width: 500px;
+}
+
+div.ens_form h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 5px;
+}
+
+div.ens_form hr {
+	border: 1px solid #CCCCCC;
+}
+
+div.ens_form .note {
+	font-size: .94em;
+        margin-left: 148px;
+}
+
+div.ens_form fieldset {
+	width: 320px;
+	padding: 5px;
+	margin: 0px;
+	border: none;
+	display: inline-block;
+	clear: none;
+}
+
+div.ens_form fieldset legend {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 5px auto 2px 10px;
+}
+
+div.ens_form fieldset label {
+	width: 115px;
+	margin: 8px 6px 2px;
+	font-weight: bold;
+	text-align: right;
+	display: inline-block;
+}
+
+div.ens_form div {
+	margin: 4px 2px;
+}
+
+div.ens_form fieldset div select, div.ens_form fieldset div input {
+	display: inline-block;
+	clear: none;
+	margin-bottom: 0px;
+}
+
+div.ens_form fieldset span.mag {
+	clear: none;
+	display: inline;
+	margin: auto auto auto 131px;
+	font-size: .8em;
+	color: #666666;
+}
+
+
+div.ens_form #message, div.ens_form #preview {
+	display: block;
+	margin: 0px;
+	padding: 5px;
+	width: 150px;
+	float: right;
+	vertical-align: top;
+}
+
+div.ens_form #message ul {
+	display: inline;
+}
+
+div.ens_form button{
+	vertical-align:top;
+	margin: 8px auto;
+}
+
+#subscribe_btn, #unsubscribe_btn {
+	margin: 5px auto 5px 148px;
+}
+
+div.ens_form .disclaimer_message {
+	font-size: .9em;
+	display: block;
+}
+
+div.ens_form .disclaimer {
+  background: #f9fbfb;
+  color: #333333;
+  display: none;
+  font-size: .9em;
+  margin: 5px -2px;
+  padding: 5px;
+  width: 375px;
+}
+
+/* end of register page styles */
+
+#recover_form label {
+  clear: right;
+  float: none;
+  width: auto;
+}
+
+.captcha p {
+	text-align: center;
+}
+
+
+
+
+/** This stuff is for accessability **/
+
+
+/* These are for the left navigation */
+/* All of the stuff related to forms is unused */
+
+/*
+#nav-left form.nav_left, form.nav_left input {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+#nav-left input.nav_left, #nav-left a {
+	display: block;
+	position:relative;
+	color: #000033;
+	text-align: left;
+	background: #D4E4F0;
+	border-top: 1px #FFFFFF solid;
+	border-bottom: 1px #BAD5E8 solid;
+	border-left: none;
+	border-right: none;
+	font: .95em Arial, Helvetica, sans-serif;
+}
+
+#nav-left input.nav_left {
+	width:178px;
+	padding: 0 5px;
+}
+
+#nav-left li li form.nav_left input.nav_left {
+	padding-left: 25px;
+}
+
+#nav-left form.nav_left input.nav_left:hover {
+	background: #E1EFFA;
+	color: #000000;
+	border-bottom: 1px solid #E1EFFA;
+	border-top: 1px solid #E1EFFA;
+	cursor: pointer;
+}
+
+#nav-left form.nav_left strong input.nav_left, #nav-left form.nav_left strong input.nav_left:hover {
+	color: #111111;
+	background: #FFFFFF;
+	font-weight: bold;
+}
+*/
+#nav-left li {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+	width: 178px;
+}
+
+#nav-left a.nav_left:hover {
+	background: #e1effa;
+	color: #000000;
+	border-bottom: 1px solid #e1effa;
+	border-top: 1px solid #e1effa;
+}
+
+#nav-left li li a.nav_left {
+	padding-left: 25px;
+}
+
+#nav-left strong a.nav_left , #nav-left strong a.nav_left:hover {
+        color: #111111;
+        background: #FFFFFF;
+        font-weight: bold;
+
+}
+
+/** This is for the calendar stuff **/
+#tblVacation {
+	border: 2px ridge #999999;
+	background-color: #F6F6F6;
+}
+
+#tblVacation input {
+	background-color: #FFFFCC;
+}
+
+#tblVacation th {
+	text-align: center;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.calendar {
+	float: left;
+	position: absolute;
+	z-index: 999;
+	background-color: #EEEEEE;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #333333;
+	visibility: hidden;
+}
+
+.calendar table {
+	margin: 0;
+	padding: 0;
+}
+
+.cpDayColumnHeader, .cpYearNavigation, .cpMonthNavigation,
+.cpMonthDateDisabled, .cpOtherMonthDate, .cpOtherMonthDateDisabled,
+.cpCurrentDate, .cpCurrentDateDisabled, .cpTodayText, .cpTodayTextDisabled
+.cpText {
+	font-family: arial;
+	font-size: 10px;
+}
+
+.cpYearNavigation, .cpMonthNavigation {
+	background-color: #C3D3F0;
+	text-align: center;
+	vertical-align: top;
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+td.cpDayColumnHeader {
+	text-align: center;
+	border: solid thin #C0C0C0;
+	border-width: 0px 0px 1px 0px;
+}
+
+.cpCurrentMonthDate, .cpOtherMonthDate, .cpCurrentDate {
+	text-align: center;
+	text-decoration: none;
+}
+
+.cpCurrentMonthDateDisabled, .cpOtherMonthDateDisabled, .cpCurrentDateDisabled {
+	color: #D0D0D0;
+	text-align: center;
+	text-decoration: line-through;
+}
+
+.cpCurrentMonthDate, .cpCurrentDate {
+	color: #000000;
+}
+
+.cpOtherMonthDate { color: #808080; }
+
+td.cpCurrentDate {
+	color: #FFFFFF;
+	background-color: #C0C0C0;
+	border-width: 1px;
+	border: solid thin #800000;
+	text-align: center;
+}
+
+td.cpCurrentDateDisabled {
+	border-width: 1px;
+	border: solid thin #FFAAAA;
+}
+
+td.cpTodayText, td.cptodayTextDisabled {
+	border: solid thin #C0C0C0;
+	border-width: 1px 0px 0px 0px;
+}
+
+a.cpTodayText, span.cpTodayTextDisabled { height: 20px; }
+a.cpTodayText { color: #000000; }
+.cpTodayTextDisabled { color: #D0D0D0; }
+.cpBorder { border: solid thin #808080; }
+
+/** Override jQuery UI dialog settings for ENS **/
+.ui-dialog { z-index: 1005 !important; } /* Must be greater than leaflet footer zindex */
+.ui-dialog .ui-dialog-content {
+    font-size: 0.9em;
+}
+
+/** Override jQuery form validation. Hazdev-template's _alert.css may be interfering with the styling' **/
+#profile_form label.error {
+    color: red;
+    display: block;
+    font-style: italic;
+}
+
+#profile_form .error:before {
+    content: '';
+}
