@@ -634,18 +634,22 @@ from ShakeMap, so subscribing just to PAGER may meet many user's needs.  For fur
 ShakeMap, please see <a href="https://earthquake.usgs.gov/data/shakemap/" target="_new">https://earthquake.usgs.gov/data/shakemap/</a>".</p> 
 <p>&nbsp;</p>
 
-<h3><a name="shakealert"></a>ShakeAlert&reg;</h3>
-<p>The ShakeAlert&reg; earthquake early warning system rapidly detects potentially 
-  damaging earthquakes and develops messages for technical partners to distribute to end users. 
-  A few minutes after the earthquake, a review is made of ShakeAlert&reg; performance that compares 
-  ShakeAlert&reg; magnitude and location estimates to normally more accurate estimates from a 
-  regional seismic network. ENS subscribers to the ShakeAlert&reg; message will receive a short 
-  message indicating that a new ShakeAlert&reg; performance review has been received. 
-  The message will indicate when the event occurred, the peak estimated shaking intensity, 
-  and a short URL to the USGS event web page. </p>
- 
-<p>Subscribing to ENS messages about ShakeAlert&reg; will not provide timely earthquake early warning. 
-  For further explanation and details, please see: <a href="https://www.usgs.gov/programs/earthquake-hazards/science/early-warning" target="_new">https://www.usgs.gov/programs/earthquake-hazards/science/early-warning</a> </p>
+<h3><a name="shakealert"></a>ShakeAlert&reg; Earthquake Early Warning System</h3>
+A few minutes after an earthquake of magnitude 4 or larger in California, Oregon, or Washington, 
+ENS subscribers to the ShakeAlert&reg; message will receive a short message. The message will say 
+when the earthquake occurred and what was its peak estimated magnitude, and give a short URL 
+to the appropriate USGS event web page. Subscribing to ENS messages about ShakeAlert&reg; will not 
+provide timely earthquake early warning.
+
+The ShakeAlert&reg; Earthquake Early Warning System rapidly detects potentially damaging 
+earthquakes in or near the three west-coast states and estimates shaking intensities. 
+ShakeAlert&reg; quickly sends messages for technical partners who actually provide early warning to end users.
+
+A few minutes after the earthquake, a review is made of ShakeAlert&reg; performance. The review 
+compares ShakeAlert&reg; magnitude and location estimates to normally more accurate estimates 
+from a regional seismic network. The ENS message is based on the ShakeAlert&reg; System performance report.
+
+For further explanation and details, please see: <a href="https://www.usgs.gov/programs/earthquake-hazards/science/early-warning" target="_new">https://www.usgs.gov/programs/earthquake-hazards/science/early-warning</a> </p>
 
 <h3><a name="oaf"></a>OAF: Operational Aftershock Forecast</h3>
 <p>Aftershocks are expected to occur following most moderate and large earthquakes.  Larger mainshocks tend to 
