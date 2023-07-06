@@ -24,10 +24,14 @@ $FILE_PATH = str_replace("/inc", "", $FILE_PATH);
         $userclass =    $USER_INFO['userclass'];
         $aftershock =   $USER_INFO['aftershock'];
         $updates =      $USER_INFO['updates'];
-        $shakemap =     $USER_INFO['shakemap'];
         $defer =        $USER_INFO['defer'];
+		$oaf =        	$USER_INFO['oaf'];
+		$pager =        $USER_INFO['pager'];
+		$shakemap = 	$USER_INFO['shakemap'];
+		$shakealert =   $USER_INFO['shakealert'];
         $affiliation =  $USER_INFO['affiliation'];
         $otherinterest= $USER_INFO['otherinterest'];
+        $notification= 	$USER_INFO['alert'];
 
 	if(!isset($startdate)) {
 		$startdate = date("Y-m-d");
@@ -56,7 +60,7 @@ include("tabs.inc.php");
 				</div>
 				<div>
 					<label for="timezone">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdtimezonetext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#timezone\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdtimezonetext) ?>
 					</label>
 					<select name="timezone">
 						<?php
@@ -73,7 +77,7 @@ include("tabs.inc.php");
 
 				<div>
 					<label for="language">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdlanguagetext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#language\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdlanguagetext) ?>
 					</label>
 					<select name="language">
 						<?php
@@ -90,7 +94,7 @@ include("tabs.inc.php");
 
 				<div>
 					<label for="affiliation">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdaffiliationtext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#affiliation\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdaffiliationtext) ?>
 					</label>
 					<select name="affiliation">
 						<?php
@@ -114,7 +118,7 @@ include("tabs.inc.php");
 
 				<div>
 					<label for="aftershock">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdaftershocktext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#aftershock\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdaftershocktext) ?>
 					</label>
 						<?php
 							if($aftershock == "Y") {
@@ -133,7 +137,7 @@ include("tabs.inc.php");
 
 				<div>
 					<label for="updates">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdupdatestext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#updates\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdupdatestext) ?>
 					</label>
 						<?php
 						if($updates == "Y") {
@@ -152,7 +156,7 @@ include("tabs.inc.php");
 
 				<div>
 					<label for="defer">
-						<?php printf ("<a href=\"%s/help?ispopup=true#format\" target=\"_blank\">%s</a>", $WEB_PATH, $passwddefertext) ?>
+						<?php printf ("<a href=\"%s/help?ispopup=true#defer\" target=\"_blank\">%s</a>", $WEB_PATH, $passwddefertext) ?>
 					</label>
 						<?php
 						if($defer == "Y") {
@@ -167,6 +171,77 @@ include("tabs.inc.php");
 							print '<label for="defer-no">No</label>';
 						}
 						?>
+				</div>
+				<div>
+					<label for="alerts">
+						<?php printf ("<a href=\"%s/help?ispopup=true#alerts\" target=\"_blank\">%s</a>", $WEB_PATH, $passwdalertnotifications) ?>
+					</label>
+					Products below come as individual additional reports, normally a few minutes to a few tens of minutes after the earthquake that triggers them.
+					<br>
+					<label for="pager" style="font-weight:bold;" id="account_pref_pager">PAGER (Prompt Assessment of Global Earthquakes for Response)</label>
+					If selected, ENS will send you an email or text summarizing the category of earthquake impact in terms of fatalities and economic losses as estimated by the USGS PAGER system. <?php printf ("<a href=\"%s/help?ispopup=true#pager\" target=\"_blank\">%s</a>", $WEB_PATH, '<For more details>') ?>
+					<br>
+						<?php
+						if($pager == "Y") {
+							print '<input type="radio" name="pager" id="pager-yes" value="Y" checked="checked" />';
+							print '<label for="pager-yes">Yes</label>';
+							print '<input type="radio" name="pager" id="pager-no" value="N" />';
+							print '<label for="pager-no">No</label>';
+						} else {
+							print '<input type="radio" name="pager" id="pager-yes" value="Y" />';
+							print '<label for="pager-yes">Yes</label>';
+							print '<input type="radio" name="pager" id="pager-no" value="N" checked="checked" />';
+							print '<label for="pager-no">No</label>';
+						}
+						?>
+					<label for="shakemap" style="font-weight:bold; width: 100px;" id="account_pref_shakemap">ShakeMap</label>
+					ShakeMaps are near-real-time maps of peak shaking intensity and ground motion amplitude. ShakeMaps are made for magnitude 3.5 and larger earthquakes in most of the U.S. and for magnitude 5.4 event and larger worldwide. <?php printf ("<a href=\"%s/help?ispopup=true#shakemap\" target=\"_blank\">%s</a>", $WEB_PATH, '<For more details>') ?>
+					<br>
+						<?php
+						if($shakemap == "Y") {
+							print '<input type="radio" name="shakemap" id="shakemap-yes" value="Y" checked="checked" />';
+							print '<label for="shakemap-yes">Yes</label>';
+							print '<input type="radio" name="shakemap" id="shakemap-no" value="N" />';
+							print '<label for="shakemap-no">No</label>';
+						} else {
+							print '<input type="radio" name="shakemap" id="shakemap-yes" value="Y" />';
+							print '<label for="shakemap-yes">Yes</label>';
+							print '<input type="radio" name="shakemap" id="shakemap-no" value="N" checked="checked" />';
+							print '<label for="shakemap-no">No</label>';
+						}
+						?>						
+					<label for="shakealert" style="font-weight:bold; width: 100px;" id="account_pref_shakealert">ShakeAlert&reg; Earthquake Early Warning System</label>
+					If selected, ENS will send a short message that a new report from the ShakeAlert&reg; System has been received, plus a link to the associated USGS event web page.  The ShakeAlert&reg; System reports when it detects an earthquake of magnitude 4 or greater in the California, Oregon, and Washington tri-state region. <?php printf ("<a href=\"%s/help?ispopup=true#shakealert\" target=\"_blank\">%s</a>", $WEB_PATH, '<For more details>') ?>
+					<br>
+						<?php
+						if($shakealert == "Y") {
+							print '<input type="radio" name="shakealert" id="shakealert-yes" value="Y" checked="checked" />';
+							print '<label for="shakealert-yes">Yes</label>';
+							print '<input type="radio" name="shakealert" id="shakealert-no" value="N" />';
+							print '<label for="shakealert-no">No</label>';
+						} else {
+							print '<input type="radio" name="shakealert" id="shakealert-yes" value="Y" />';
+							print '<label for="shakealert-yes">Yes</label>';
+							print '<input type="radio" name="shakealert" id="shakealert-no" value="N" checked="checked" />';
+							print '<label for="shakealert-no">No</label>';
+						}
+						?>		
+					<label for="oaf" style="font-weight:bold;" id="account_pref_oaf">Operational Aftershock Forecast (OAF)</label>
+					Aftershock forecasts are developed for M 5.0 and larger earthquakes in the US and US territories.  The OAF message from ENS will give the 7-day probability for an M>=5 aftershock. <?php printf ("<a href=\"%s/help?ispopup=true#oaf\" target=\"_blank\">%s</a>", $WEB_PATH, '<For more details>') ?>
+					<br>
+					<?php
+						if($oaf == "Y") {
+							print '<input type="radio" name="oaf" id="oaf-yes" value="Y" checked="checked" />';
+							print '<label for="oaf-yes">Yes</label>';
+							print '<input type="radio" name="oaf" id="oaf-no" value="N" />';
+							print '<label for="oaf-no">No</label>';
+						} else {
+							print '<input type="radio" name="oaf" id="oaf-yes" value="Y" />';
+							print '<label for="oaf-yes">Yes</label>';
+							print '<input type="radio" name="oaf" id="oaf-no" value="N" checked="checked" />';
+							print '<label for="oaf-no">No</label>';
+						}
+						?>				 
 				</div>
 				<input type="hidden" id="ens_profile_token" name="ens_profile_token" value="<?php echo htmlentities(getCSRFToken(), ENT_QUOTES, 'UTF-8') ?>">
 				<button name="submit" type="submit">Save Changes</button>
